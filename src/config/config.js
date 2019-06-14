@@ -6,7 +6,7 @@ module.exports = {
             name: 'taskmanagerdb',
             dialect: 'mysql',
             user: 'root',
-            password: 'gui713469'
+            password: 'your password'
         }
     },
     pord:{
