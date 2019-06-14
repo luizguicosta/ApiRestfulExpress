@@ -1,0 +1,42 @@
+comando e pacotes instalados
+
+INICIANDO O PROJETO
+npm init
+
+CRIANDO O SERVER:
+npm install express --save
+criado o arquivo app.js e configurado o servidor
+
+CONFIGURAÇÃO DA CONEXÃO COM O BANCO:
+npm install sequelize --save (orm)
+npm install mysql2 --save
+criada a pasta config e dentro dela o config.js e configurado o modulo de conexão
+foi criada também a pasta database e as configuração de conexão com o banco dentroda pasta database e database.js
+
+CRIANDO UM MODEL COM SEQUELIZE:
+foi criado a pasta model e dentro dela foi criado o task.js(model) do banco
+
+CRIANDO O MÓDULO DE CONTROLE:
+foi criada a pasta de controller no projeto e o controller dentro da mesma
+também foi implementado
+
+CONFIGURANDO ROTAS:
+foi criada a pasta de routes e dentro dela routes task.js configurando as rodas da aplicação
+
+CONEXÃO COM O BANCO E TRATAMENTO DE ERROS
+npm install http-status --save
+foi adicionado o meddleware e tratamento de erro no servidor no app.js
+foi criada a conexão com o banco de dados no app.js
+
+
+
+error: Unhandled rejection SequelizeConnectionError: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+
+correção:
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'youpassword'
+
+
+endpoints:
+http://localhost:3000/api/task (getAll, post)
+http://localhost:3000/api/task/1 (getById, update and delete)
+http://localhost:3000/api/task/?limit=10&page=1 (get limit registers and number page)
